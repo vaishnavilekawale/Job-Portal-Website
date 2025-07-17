@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #f8f9fa;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: url('../job-portal-website/images/home_main.avif') center center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 160px 20px 120px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 14px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 6px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    .categories {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 70px 20px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .categories h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #ffd700;
+    }
+
+    .category-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .category {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 30px;
+      border-radius: 16px;
+      width: 200px;
+      transition: transform 0.3s ease, background 0.3s;
+      cursor: pointer;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .category:hover {
+      background: #007bff;
+      transform: scale(1.08);
+    }
+
+    .category i {
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #ffd700;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .category-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-briefcase"></i> Job Portal</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="jobs.php">Jobs</a>
+        <a href="login.php">Login</a>
+        <a href="register.php">Register</a>
+        <a href="admin_login.php">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Find Your Dream Job</h2>
+      <p>Explore top opportunities in leading industries.</p>
+      <a href="jobs.php" class="btn"><i class="fas fa-search"></i> Browse Jobs</a>
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="container">
+      <h3><i class="fas fa-layer-group"></i> Popular Categories</h3>
+      <div class="category-list">
+        <div class="category"><i class="fas fa-laptop-code"></i><br> IT</div>
+        <div class="category"><i class="fas fa-chart-line"></i><br> Finance</div>
+        <div class="category"><i class="fas fa-user-nurse"></i><br> Healthcare</div>
+        <div class="category"><i class="fas fa-chalkboard-teacher"></i><br> Education</div>
+        <div class="category"><i class="fas fa-tools"></i><br> Engineering</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Job Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
